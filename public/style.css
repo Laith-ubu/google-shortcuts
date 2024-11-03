@@ -1,0 +1,130 @@
+body{
+    height: 100%; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.navBar{
+    width: 100%;
+    height: 50px;
+    background-color: #3C3C3C;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-right: 15px;
+    justify-content: flex-end;
+    
+}
+.paddin{
+    padding: 0 5px;
+}
+.paddin2{
+    padding: 0 20px ;
+}
+.margn{
+    margin: 10px;
+}
+.profile-navBar{
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+}
+.middle{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3C3C3C;
+}
+.font-size-h1{
+    font-size: 100px;
+    font-weight: 500;
+    color: white ;
+}
+.mid-div-search{
+    padding: 10px;
+}
+.search{
+    width: 700px;
+    height: 50px;
+    border-radius: 30px;
+}
+.adj-shorcuts{
+    display: flex;
+    flex-direction: row;
+}
+.gray-backg{
+    background-color: rgb(68 71 70);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.adjust{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.center-middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px ;
+}
+.font-size-h5{
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+}
+.pic-middle{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.location{
+    width: 100%;
+    background-color: black;
+}
+.locat{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start ;
+}
+Footer{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 0.5px whitesmoke solid;
+}
+.footer-right{
+    display: flex;
+    flex-direction: row;
+}
+.footer-left{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 850px) {
+
+    .search{
+    width: 600px;
+    height: 50px;
+    border-radius: 30px;
+}
+}
+@media (max-width: 700px) {
+
+    .search{
+        width: 400px;
+        height: 50px;
+        border-radius: 30px;
+    }
+}
