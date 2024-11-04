@@ -91,11 +91,11 @@
     </div>
     <script>
         document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault();
             
             const query = document.getElementById('searchInput').value;
-            const apiKey = 'AIzaSyAuscRAidBsJE3c4LtJoFYqz2JAWHg41Wo'; // Replace with your actual API key
-            const cx = 'b74dbb7bbe763474d'; // Replace with your actual Search Engine ID
+            const apiKey = 'AIzaSyAuscRAidBsJE3c4LtJoFYqz2JAWHg41Wo'; 
+            const cx = 'b74dbb7bbe763474d';
             const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${apiKey}&cx=${cx}`;
 
             fetch(apiUrl)
@@ -106,19 +106,10 @@
                     return response.json();
                 })
                 .then(data => {
-                    const resultsContainer = document.getElementById('results');
-                    resultsContainer.innerHTML = ''; // Clear previous results
+                    localStorage.setItem('searchResults', JSON.stringify(data.items));
 
-                    if (data.items && data.items.length > 0) {
-                        data.items.forEach(item => {
-                            const resultItem = document.createElement('div');
-                            resultItem.classList.add('result-item');
-                            resultItem.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a><p>${item.snippet}</p>`;
-                            resultsContainer.appendChild(resultItem);
-                        });
-                    } else {
-                        resultsContainer.innerHTML = '<p>No results found.</p>';
-                    }
+                    // Redirect to results page
+                    window.location.href = '{{ url("result") }}'; //
                 })
                 .catch(error => {
                     console.error('Error fetching search results:', error);
