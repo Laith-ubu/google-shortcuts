@@ -1,18 +1,23 @@
-body{
+body, html{
     height: 100%; 
     margin: 0;
     box-sizing: border-box;
     font-family: system-ui, sans-serif;
+    background-color: #202124;
 }
 a{
     text-decoration: none;
     color: white;
     font-size: 13px;
 }
+input{
+    background-color: #4d5157;
+    color: white;
+}
 .navBar{
     width: 100%;
     height: 50px;
-    background-color: #3C3C3C;
+    background-color: #202124;
 }
 .right{
     display: flex;
@@ -38,11 +43,10 @@ a{
 }
 .middle{
     width: 100%;
-    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #3C3C3C;
+    background-color: #202124;
 }
 .font-size-h1{
     font-size: 100px;
@@ -89,18 +93,21 @@ a{
 }
 .location{
     width: 100%;
-    background-color: black;
+    background-color: #171717;
 }
 .locat{
     display: flex;
     flex-direction: row;
     justify-content:flex-start ;
+    height: 40px;
+    align-items: center;
 }
 Footer{
     width: 100%;
-    background-color: black;
+    background-color: #171717;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-top: 0.5px whitesmoke solid;
 }
@@ -128,3 +135,70 @@ Footer{
         border-radius: 30px;
     }
 }
+.adj-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    margin: 15px;
+}
+.button-middle-font{
+    color: white;
+    font-size: 15px;
+}
+.button-middle-box{
+    background-color: #303134;
+    border: 1px solid #303134;
+    width: 135px;
+    height: 35px;
+    border-radius: 5px;
+}
+.language{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 200px;
+    justify-content: space-around;
+}
+.language-font{
+    color: #5f8bff;
+}
+.test{
+    /* position:absolute; */
+    bottom:0;
+    width: 100%;
+}
+
+
+/* Existing styles... */
+
+.results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #303134;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 80%; /* Adjust width as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.result-item a {
+    color: #5f8bff; /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.result-item p {
+    font-size: 14px;
+    color: #b0b0b0; /* Lighter text color for snippets */
+}
+
+/* Existing media queries... */
