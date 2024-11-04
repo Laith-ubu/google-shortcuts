@@ -108,8 +108,7 @@
                 .then(data => {
                     localStorage.setItem('searchResults', JSON.stringify(data.items));
 
-                    // Redirect to results page
-                    window.location.href = '{{ url("result") }}'; //
+                    window.location.href = '{{ url("result") }}'; 
                 })
                 .catch(error => {
                     console.error('Error fetching search results:', error);
